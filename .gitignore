@@ -1,0 +1,79 @@
+# Sensitive Files
+
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.keystore
+*.secrets
+*.password
+*.json.enc
+
+# Foundry keystore directory
+.foundry/keystores/
+~/.foundry/keystores/
+keystores/
+wallets/
+
+# Build / Cache
+# Foundry
+out/
+cache/
+broadcast/
+lib/
+
+# Hardhat
+artifacts/
+cache/
+typechain/
+typechain-types/
+
+# Truffle
+build/
+
+# Remix backups
+*.swp
+*.swo
+*.bak
+
+# Node / Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Python / Virtualenvs (if used for scripting)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# IDE / Editor Files
+.vscode/
+.idea/
+*.code-workspace
+
+# OS / Misc
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.pid
+
+# Test / Simulation Files
+anvil.log
+*.dump
+*.trace
+*.fork
+*.coverage
+coverage/
+coverage.json
+
+# Misc Project Files
+notes/
+drafts/
+sandbox/
+scratch/
+temp/
+tmp/
