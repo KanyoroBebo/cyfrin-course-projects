@@ -1,5 +1,4 @@
 # Sensitive Files
-
 .env
 .env.*
 *.key
