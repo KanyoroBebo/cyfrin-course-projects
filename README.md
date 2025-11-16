@@ -23,17 +23,38 @@ README.md
 fund-me/
   foundry.toml
   src/
-    Counter.sol
+    FundMe.sol
+    PriceConverter.sol
+    storageExamples/
+      FunWithStorage.sol
   script/
-    Counter.s.sol
+    DeployFundMe.s.sol
+    HelperConfig.s.sol
+    Interactions.s.sol
   test/
-    Counter.t.sol
+    unit/
+      FundMeTest.t.sol
+    integration/
+      InteractionsTest.t.sol
+    mocks/
+      MockV3Aggregator.sol
+html-fund-me/
+  index.html
+  index.js
+  constants.js
 simple-storage/
+  foundry.toml
   src/
+    SimpleStorage.sol
+  script/
+    DeploySimpleStorage.s.sol
   test/
-MyToken/
-  MyToken.sol
-test/
+smart-contract-lottery/
+  foundry.toml
+  src/
+    Raffle.sol
+  script/
+  test/
 ```
 
 Notes:
