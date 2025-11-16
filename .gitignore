@@ -1,6 +1,7 @@
-# Sensitive Files
+# Sensitive files
 .env
 .env.*
+.envrc
 *.key
 *.pem
 *.p12
@@ -8,50 +9,55 @@
 *.secrets
 *.password
 *.json.enc
+secrets/
+.keystore/
+.keystores/
 
-# Foundry keystore directory
-.foundry/keystores/
-~/.foundry/keystores/
-keystores/
-wallets/
+# Direnv
+.direnv/
 
-# Build / Cache
-# Foundry
+# Foundry / EVM
 out/
 cache/
 broadcast/
 lib/
+zkout/
+.remappings.txt
+remappings.txt
+anvil.log
+anvil*.log
+*.trace
+*.trace.json
+debug_*.json
+debug_tx.json
 
 # Hardhat
 artifacts/
-cache/
 typechain/
 typechain-types/
 
-# Truffle
-build/
-
-# Remix backups
-*.swp
-*.swo
-*.bak
-
-# Node / Dependencies
+# Node / JS / Frontend
 node_modules/
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
+dist/
+build/
+coverage/
+coverage.json
+coverage-final.json
+lcov-report/
+.npmrc
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# Python / Virtualenvs (if used for scripting)
-__pycache__/
-*.pyc
-.venv/
-venv/
-
-# IDE / Editor Files
+# IDE / Editor
 .vscode/
 .idea/
 *.code-workspace
+*.iml
 
 # OS / Misc
 .DS_Store
@@ -59,17 +65,19 @@ Thumbs.db
 *.log
 *.tmp
 *.pid
+*.swp
+*.swo
+*.bak
 
-# Test / Simulation Files
+# Test / Simulation
 anvil.log
 *.dump
-*.trace
 *.fork
 *.coverage
 coverage/
 coverage.json
 
-# Misc Project Files
+# Misc project scratch
 notes/
 drafts/
 sandbox/
