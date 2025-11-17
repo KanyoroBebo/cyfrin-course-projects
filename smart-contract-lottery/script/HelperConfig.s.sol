@@ -15,6 +15,9 @@ abstract contract CodeConstants {
 
     uint256 public constant ETH_SEPOLIA_CHAIN_ID = 11155111;
     uint256 public constant LOCAL_CHAIN_ID = 31337;
+    uint96 public constant MOCK_BASE_FEE = BASE_FEE;
+    uint96 public constant MOCK_GAS_PRICE_LINK = GAS_PRICE_LINK;
+    int256 public constant MOCK_WEI_PER_UNIT_LINK = WEI_PER_UNIT_LINK;
 }
 
 contract HelperConfig is CodeConstants, Script {

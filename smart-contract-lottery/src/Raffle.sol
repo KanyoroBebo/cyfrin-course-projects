@@ -39,9 +39,9 @@ import {
 
 contract Raffle is VRFConsumerBaseV2Plus {
     // Custom errors
-    error Raffle_NotEnoughETHSent();
-    error Raffle_TransferFailed();
-    error Raffle_RaffleNotOpen();
+    error Raffle__NotEnoughETHSent();
+    error Raffle__TransferFailed();
+    error Raffle__RaffleNotOpen();
     error Raffle__UpKeepNotNeeded(
         uint256 balance,
         uint256 playersLength,
@@ -91,10 +91,10 @@ contract Raffle is VRFConsumerBaseV2Plus {
 
     function enterRaffle() external payable {
         if (msg.value < i_entranceFee) {
-            revert Raffle_NotEnoughETHSent();
+            revert Raffle__NotEnoughETHSent();
         }
         if (s_raffleState != RaffleState.OPEN) {
-            revert Raffle_RaffleNotOpen();
+            revert Raffle__RaffleNotOpen();
         }
         s_players.push(payable(msg.sender));
         emit EnteredRaffle(msg.sender);
@@ -163,12 +163,20 @@ contract Raffle is VRFConsumerBaseV2Plus {
         // Interactions (External contract state)
         (bool success, ) = recentWinner.call{value: address(this).balance}("");
         if (!success) {
-            revert Raffle_TransferFailed();
+            revert Raffle__TransferFailed();
         }
     }
 
     // Getter Functions
     function getEntranceFee() external view returns (uint256) {
         return i_entranceFee;
+    }
+
+    function getRaffleState() external view returns (RaffleState) {
+        return s_raffleState;
+    }
+
+    function getPlayer(uint256 indexOfPlayer) external view returns (address) {
+        return s_players[indexOfPlayer];
     }
 }
