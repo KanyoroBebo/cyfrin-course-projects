@@ -60,7 +60,6 @@ smart-contract-lottery/
 Notes:
 - Minimal view: intentionally omits files/folders excluded by `.gitignore` (for example: `cache/`, `out/`, `lib/`, `broadcast/`, `node_modules/`).
 - Run `forge build` and `forge test` inside any project folder to build and test that project.
-````
 
 ---
 
