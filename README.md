@@ -69,7 +69,7 @@ Notes:
    ```bash
    curl -L https://foundry.paradigm.xyz | bash
    foundryup
-  ```
+   ```
 
 2. **Clone this repository**
 
