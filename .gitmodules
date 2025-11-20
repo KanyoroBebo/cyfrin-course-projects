@@ -7,3 +7,6 @@
 [submodule "fund-me/lib/forge-std"]
 	path = fund-me/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "smart-contract-lottery/lib/solmate"]
+	path = smart-contract-lottery/lib/solmate
+	url = https://github.com/transmissions11/solmate
